@@ -1,0 +1,343 @@
+@charset "UTF-8"; /* Define o padrão de codificação do arquivo CSS como UTF-8 */
+
+* {
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura total do elemento */
+  margin: 0;/* Remove margens padrão de todos os elementos */
+  padding: 0;/* Remove espaçamentos internos padrão */
+}
+
+/* ===== CONFIGURAÇÃO DA PÁGINA ===== */
+body {
+  height: 100%; /* Garante que o corpo ocupe toda a altura da tela */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Fonte legível e moderna */
+  color: #111; /* Cor do texto (preto suave) */
+  background: linear-gradient(to left, #95e598, #bee9e9); /* Fundo com gradiente verde-azulado */
+  
+}
+
+/* ===== TÍTULOS ===== */
+h2 {
+  text-align: center; /* Centraliza o texto */
+  color: #0a9711; /* Cor verde forte */
+  font-size: 3rem; /* Tamanho grande da fonte */
+  margin: 0.5rem 0; /* Espaçamento acima e abaixo do título */
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  background: green; /* Cor de fundo verde */
+  padding: clamp(0.5rem, 2.5vw, 1rem); /*Padding responsivo (varia com a largura da tela) */
+  text-align: center; /* Centraliza o conteúdo textual */
+  position: relative; /* Permite posicionar elementos filhos com "position: absolute" */
+  border-bottom-left-radius: 20px; /* Arredonda canto inferior esquerdo */
+  border-bottom-right-radius: 20px; /* Arredonda canto inferior direito */
+  display: flex; /* Usa flexbox para alinhar elementos */
+  align-items: center; /* Centraliza verticalmente dentro do header */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo principal */
+  gap: 1rem; /* Espaço entre os elementos dentro do header */
+}
+
+/* ===== TÍTULO DENTRO DO HEADER ===== */
+header h1 { /*Aqui a mesma configuração  do h1 do header, também é utilizado no h1 do header da classe pg003.*/
+  font-size: clamp(1rem, 4vw, 1.6rem); /* Fonte responsiva (mínimo 1rem, máximo 1.6rem) */
+  color: #fff; /* Texto branco */
+  font-family: cursive; /* Estilo manuscrito */
+  margin: 0; /* Remove margens padrão */
+  line-height: 1; /* Altura da linha compacta */
+  text-align: center; /* Centraliza o texto */
+}
+
+
+
+
+/* ===== BOTÃO DIREITO ===== */
+.btn { /*Aqui a mesma configuração  da classe btn, também é utilizado na classe btn que está dentro da classe pg003.*/
+  background: #044207; /* Verde escuro */
+  padding: 10px 16px; /* Espaçamento interno vertical e horizontal */
+  text-decoration: none; /* Remove sublinhado (se for link) */
+  font-family: "DM Sans", sans-serif; /* Fonte moderna */
+  font-size: 0.9rem; /* Tamanho do texto do botão */
+  color: white; /* Texto branco */
+  border-radius: 20px; /* Bordas arredondadas */
+  transition: 0.25s all; /* Transição suave em qualquer alteração */
+  font-weight: bold; /* Negrito */
+  position: absolute; /* Posicionamento livre dentro do header */
+  right: 1rem; /* Distância da borda direita */
+  top: 50%; /* Posiciona no meio vertical */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  box-shadow: 0 2px 6px rgba(1,1,1,0.08); /* Sombra leve */
+}
+
+
+.btn:hover {
+  background: #8edd90; /* Muda a cor ao passar o mouse */
+  transform: translateY(-50%) scale(1.05); /* Aumenta levemente (5%) mantendo centralizado */
+  color: black;
+  cursor: pointer; /* Mostra a “mãozinha” de clique */
+}
+
+/* ===== BOTÃO DE VOLTAR (ESQUERDA) ===== */
+.voltar {
+  position: absolute; /* Posicionamento livre dentro do header */
+  left: 1rem; /* Fica encostado à esquerda */
+  top: 50%; /* No meio vertical do header */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  display: inline-block; /* Garante que o link se comporte como um bloco */
+}
+
+/* ===== IMAGEM DO BOTÃO VOLTAR ===== */
+.voltar img {
+  width: 48px; /* Largura da imagem (ajustada para mobile) */
+  height: auto; /* Mantém proporção original */
+  display: block; /* Evita espaços indesejados */
+  transition: transform 0.2s ease, filter 0.2s ease; /* Transição suave em hover */
+}
+
+/* EFEITO DE HOVER NA IMAGEM DE VOLTAR */
+.voltar:hover img {
+  transform: scale(1.08); /* Aumenta levemente o tamanho */
+  filter: brightness(1.08); /* Aumenta o brilho */
+  cursor: pointer; /* Mostra a “mãozinha” */
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.principal {
+  margin: 18px auto; /* Margem superior e inferior, centraliza horizontalmente */
+  width: min(1000px, 85%); /* Largura máxima de 1100px ou 95% da tela */
+  background-color: rgb(223, 243, 223); /* Fundo verde-claro */
+  border-radius: 8px; /* Cantos arredondados */
+  padding: 1.25rem; /* Espaçamento interno */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Itens em coluna */
+  gap: 1rem; /* Espaço entre os itens */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03); /* Sombra leve */
+}
+
+/* ===== ÁREA DE IMAGEM PRINCIPAL (HERO) ===== */
+.hero, .hero2 {
+  width: 100%; /* Ocupa toda a largura do container */
+  overflow: hidden; /* Esconde partes que ultrapassam o limite */
+  border-radius: 6px; /* Arredonda bordas */
+}
+
+.hero img, .hero2 img {
+  display: block; /* Remove espaçamento inline */
+  width: 100%; /* Imagem ocupa 100% da largura disponível */
+  height: auto; /* Mantém proporção */
+  max-width: 100%; /* Impede que ultrapasse o container */
+  object-fit: cover; /* Preenche o espaço sem distorcer */
+  object-position: center; /* Centraliza o foco da imagem */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+  margin: 0; /* Remove margens extras */
+  transition: transform 0.4s ease; /* Suaviza possíveis animações */
+}
+
+/* Limita a altura da imagem em telas pequenas */
+.hero img.limited-height, .hero2 img.limited-height {
+  max-height: 48vh; /* Altura máxima de 48% da tela */
+  width: auto; /* Largura ajusta conforme altura */
+  margin-left: auto;
+  margin-right: auto; /* Centraliza */
+}
+
+/* ===== TEXTOS DENTRO DO CONTAINER ===== */
+.txt1, .txt2 {
+  padding: 0.5rem; /* Espaçamento interno */
+}
+
+.txt1 h2, .txt2 h2 {
+  margin-bottom: 0.5rem; /* Espaço abaixo do título */
+  font-size: clamp(1rem, 2.2vw, 1.25rem); /* Tamanho de fonte adaptável */
+}
+
+.txt1 p, .txt2 p {
+  margin-bottom: 0.9rem; /* Espaço entre parágrafos */
+  line-height: 1.6; /* Altura de linha confortável */
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem); /* Fonte responsiva */
+  text-align: justify; /* Justifica o texto */
+}
+/* ===== RESPONSIVIDADE ===== */
+
+/* --- Pequenas telas (smartphones até 480px) --- */
+@media (max-width: 480px) {
+
+  header {
+    padding: 0.6rem; /* Reduz padding */
+    border-radius: 0 0 18px 18px; /* Mantém cantos inferiores arredondados */
+  }
+
+  header h1 {
+    font-size: clamp(1rem, 5vw, 1.2rem); /* Diminui o título */
+  }
+
+  .btn {
+    right: 0.6rem; /* Aproxima da borda */
+    padding: 8px 12px; /* Botão menor */
+    font-size: 0.85rem; /* Texto menor */
+  }
+
+  .voltar img {
+    width: 40px; /* Ícone menor */
+  }
+
+  .principal {
+    padding: 0.9rem; /* Menos espaço interno */
+    margin: 10px auto; /* Margem menor */
+    width: 96%; /* Mais estreito */
+    gap: 0.6rem; /* Menor espaçamento entre seções */
+  }
+
+  h2 {
+    font-size: 2rem; /* Título menor */
+  }
+
+  .hero img, .hero2 img {
+    height: auto;
+    max-height: 40vh; /* Limita a altura da imagem em mobile */
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column; /* Muda o layout: colunas viram blocos empilhados */
+  }
+
+  .col {
+    width: 100%; /* Cada coluna ocupa toda a largura */
+    min-width: 0; /* Permite encolher totalmente */
+  }
+}
+
+/* --- Telas médias (tablets: 481px até 900px) --- */
+@media (min-width: 481px) and (max-width: 900px) {
+
+  header h1 {
+    font-size: clamp(1.1rem, 4.5vw, 1.4rem); /* Ajuste intermediário de fonte */
+  }
+
+  .btn {
+    right: 0.8rem;
+    padding: 9px 14px; /* Botão médio */
+  }
+
+  .voltar img {
+    width: 44px; /* Ícone um pouco maior que no celular */
+  }
+
+  .principal {
+    width: 92%; /* Mais largo que no celular */
+    padding: 1rem;
+  }
+
+  .hero img, .hero2 img {
+    max-height: 50vh; /* Ajuste de altura */
+  }
+
+  .row {
+    gap: 0.8rem; /* Espaço um pouco maior entre colunas */
+  }
+}
+
+/* --- Telas grandes (desktop acima de 900px) --- */
+@media (min-width: 901px) {
+  .hero img, .hero2 img {
+    max-height: 60vh; /* Imagens maiores no desktop */
+  }
+}
+
+/*Configurações Exclusivas da Página 03.*/
+
+.pg003 * { box-sizing: border-box; } /* inclui padding/border no tamanho dos elementos */
+.pg003 body { height: 100%; } /* garante altura total do documento */
+
+/* Corpo da página (apenas em pg003) */
+.pg003 body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; /* fonte legível */
+  color: #111;  /* cor do texto */
+  background: linear-gradient(120deg, #e6fbf0, #d9f1f7); /* fundo suave */
+  margin: 0; /* remove margem padrão do body */
+  padding: 16px;/* espaçamento externo da página */
+}
+
+/* Cabeçalho (apenas em pg003) */
+.pg003 header {
+  background: linear-gradient(90deg,#0f8a2a,#0a6f1f); /* cor do header */
+  color: #fff;  /* texto branco dentro do header */
+  padding: 16px;  /* espaçamento interno */
+   border-radius: 0 0 18px 18px; /* Mantém cantos inferiores arredondados */
+  position: relative;  /* para posicionar botões internamente */
+  text-align: center;  /* centraliza título */
+}
+
+/* Título principal no header */
+
+/* Botão direito (terceira página) */
+
+
+/* Ícone de voltar (esquerda) */
+.pg003 .voltar {
+  position: absolute;/* posicione livremente no header */
+  left: 12px;/* distancia da borda esquerda */
+  top: 50%;  /* alinha verticalmente */
+  transform: translateY(-50%);   /* centraliza verticalmente */
+  display: inline-block;  /* permite tamanho controlado */
+}
+
+/* Imagem do botão voltar */
+.pg003 .voltar img {
+  width: 44px;  /* define largura do ícone */
+  height: auto; /* mantém proporção */
+  display: block; /* elimina espaços em linha */
+  border-radius: 6px; /* leve arredondamento */
+}
+
+/* 9 - container principal com no máximo 2 colunas */
+.pg003 .principal {
+  width: min(1100px, 96%); /* largura máxima e responsiva */
+  margin: 16px auto;/* centraliza a área principal */
+  background-color: rgb(223, 243, 223); /* Fundo verde-claro */
+  border-radius: 10px; /* cantos arredondados */
+  padding: 16px;  /* espaçamento interno */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);/* sombra sutil */
+  display: grid;/* usa grid layout */
+  gap: 16px; /* espaço entre os blocos */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* no máximo 2 colunas */
+}
+
+/* 10 - estilo básico de cada card */
+.pg003 .principal > div {
+  background: #fff;  /* fundo branco */
+  border-radius: 8px;/* cantos arredondados */
+  overflow: hidden;/* corta excesso de imagem */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.03); /* sombra leve */
+  display: flex;/* layout flexível */
+  flex-direction: column;/* empilha conteúdo verticalmente */
+}
+
+/* 11 - imagens maiores dentro dos cards */
+.pg003 .principal > div img {
+  width: 100%; /* ocupa toda largura do card */
+  height: 280px;/* altura maior das imagens */
+  object-fit: cover;/* cobre o espaço sem distorcer */
+  display: block;/* remove espaços em linha */
+  border-bottom: 3px solid #0a9711; /* detalhe verde na base */
+}
+
+/* 12 - título dos blocos */
+.pg003 .principal > div h2 {
+  font-size: 1.2rem;/* título um pouco maior */
+  color: #0a9711;/* cor verde */
+  text-align: center;/* centraliza texto */
+  padding: 12px 8px; /* espaçamento interno */
+  margin: 0;/* remove margens */
+}
+
+/* 13 - layout para telas pequenas (1 por linha) */
+@media (max-width: 700px) {
+  .pg003 .principal {
+    grid-template-columns: 1fr; /* apenas uma coluna em telas menores */
+  }
+
+  .pg003 .principal > div img {
+    height: 220px; /* reduz altura no celular */
+  }
+}

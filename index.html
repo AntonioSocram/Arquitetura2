@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitetura e Manutenção de Computadores</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+    <header>
+        <h1>Portas Lógicas</h1>
+        <a href="pg002.html" rel="next" target="_self" class="btn">Segunda página</a>
+        <!--Target self, self significa na própria aba, como pertence ao mesmo site, não é bom sempre que clicar no link abrir outra aba.-->
+    </header>
+    <main class="principal">
+        <!-- Conteúdo textual dentro do container principal -->
+        <section class="txt1">
+            <h2>Elementos Eletrônicos</h2>
+            <p>Um computador é constituído de elementos eletrônicos, como capacitores, resistores e principalmente
+                transistores. A porta lógica é a base para a construção de qualquer sistema digital ex.: o
+                microprocessador, ele é composto por diversas portas lógicas.
+                Em geral, os circuitos lógicos são agrupados e embutidos em um Circuito Integrado (CI), com o objetivo
+                de cumprir tarefas específicas.
+                Desse modo, portas lógicas são encontradas desde o nível de integração em Ultra Larga Escala (ULSI) ou
+                Super Larga Escala (SLSI) até circuitos digitais mais simples.
+            </p>
+            <h2>Álgebra de chaveamentos</h2>
+            <p>Semelhante à álgebra tradicional (estudada no ensino médio), torna-se necessário definir símbolos
+                matemáticos e gráficos para representar as operações lógicas e seus operadores.
+                Uma operação lógica qualquer (ex.: soma ou multiplicação de dígitos binários) sempre irá resultar em
+                dois valores possíveis: 0 para (falso) ou 1 para (verdadeiro).
+                Para representar tais possibilidades, utiliza-se de uma forma de organizá-las chamada tabela verdade.
+            </p>
+        </section>
+        <section class="txt1">
+            <h2>Porta And (e)</h2>
+            <p>Trata-se de uma operação que aceita dois operandos, binários simples (0 e 1) ou duas entradas (A e B).
+                Para ascender a lâmpada tanto A Como B devem ser verdadeiros, mas estão falsas. </p>
+            <BR>
+            <div class="hero">
+                <img src="Imagem1.webp" alt="Ilustração de memórias" />
+            </div>
+            <BR>
+            <P>Pode-se dizer que a operação AND simula uma multiplicação binária, a finalidade seria a de garantir que
+                um bit de origem seja o mesmo bit de destino (ex.: transferência da memória para a CPU).</P>
+            <BR>
+            <div class="hero">
+                <img src="Imagem2.webp" alt="Ilustração de memórias" />
+            </div>
+            <br>
+        </section>
+        <section class="txt1">
+            <h2>Porta Or (OU)</h2>
+            <p>Nesse caso precisa apenas de um dos operandos ser verdadeiro para a lâmpada ascender, mas se os dois
+                forem verdadeiros também ascendo.</p>
+            <br>
+            <div class="hero">
+                <img src="Imagem3.webp" alt="Ilustração de memórias" />
+            </div>
+            <br>
+            <p>Conforme podemos observar na figura abaixo, a regra é: “se o primeiro operando é 1 ou o segundo operando
+                é 1, ou se os dois operandos forem 1, o resultado é 1, senão o resultado é 0.</p>
+            <br>
+            <div class="hero">
+                <img src="Imagem4.webp" alt="Ilustração de memórias" />
+            </div>
+            <br>
+        </section>
+        <section class="txt1">
+            <h2>Porta XOR (Ou Exclusivo)</h2>
+            <p>A denominação XOR é a abreviação do termo EXCLUSIVE OR. Trata-se de uma operação de uma operação que
+                aceita dois operandos, binários simples (0 e 1) ou duas entradas (A e B). </p>
+            <br>
+            <div class="hero2">
+                <img src="Imagem5.webp" alt="Ilustração de memórias" />
+            </div>
+            <br>
+            <p>Pode-se dizer que a operação XOR possui como principal função a verificação de igualdade utilizado na
+                fabricação de um testador de igualdade entre valores. Conforme é possível observar na tabela abaixo, a
+                regra é: “se o primeiro operando ou o segundo operando for igual a 1, o resultado é 1; senão, o
+                resultado é 0.” Ou seja, para entradas iguais a saída será 0 e para entradas diferentes a saída será 1.
+            </p>
+            <br>
+            <div class="hero2">
+                <img src="Imagem6.webp" alt="Ilustração de memórias" />
+            </div>
+            <br>
+
+        </section>
+
+    </main>
+</body>
+
+</html>
