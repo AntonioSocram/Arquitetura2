@@ -87,7 +87,7 @@ header h1 { /*Aqui a mesma configuração  do h1 do header, também é utilizado
 
 /* ===== IMAGEM DO BOTÃO VOLTAR ===== */
 .voltar img {
-  width: 48px; /* Largura da imagem (ajustada para mobile) */
+  width: 60px; /* Largura da imagem (ajustada para mobile) */
   height: auto; /* Mantém proporção original */
   display: block; /* Evita espaços indesejados */
   transition: transform 0.2s ease, filter 0.2s ease; /* Transição suave em hover */
@@ -177,7 +177,7 @@ header h1 { /*Aqui a mesma configuração  do h1 do header, também é utilizado
   }
 
   .voltar img {
-    width: 40px; /* Ícone menor */
+    width: 60px; /* Ícone menor */
   }
 
   .principal {
@@ -284,7 +284,7 @@ header h1 { /*Aqui a mesma configuração  do h1 do header, também é utilizado
 
 /* Imagem do botão voltar */
 .pg003 .voltar img {
-  width: 44px;  /* define largura do ícone */
+  width: 60px;  /* define largura do ícone */
   height: auto; /* mantém proporção */
   display: block; /* elimina espaços em linha */
   border-radius: 6px; /* leve arredondamento */
